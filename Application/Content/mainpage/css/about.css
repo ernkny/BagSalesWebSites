@@ -1,0 +1,98 @@
+
+.aboutus{
+    justify-content: center;
+    box-shadow: 5px 10px 15px gray;
+  }
+  .aboutustext{
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    
+  }.aboutustext{
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 1.6rem;
+    line-height: 30px;
+    text-shadow: 1px 1px #fbb808;
+    
+  }
+  .altabout{
+    
+    margin-top: 20px;
+  }
+  .altabout-area{
+      margin-top:20px;
+      background-color: #D7D2CC;
+      box-shadow:5px 10px 15px gray;
+  }
+  
+  @media only screen and (max-width: 1480px) {
+    .aboutustext{
+        line-height: 20px;
+        font-size: 1.2rem;
+        
+      }
+  
+  }
+  
+
+  @media only screen and (max-width: 1280px) {
+    .aboutustext{
+        line-height: 18px;
+        font-size: 1rem;
+        
+      }
+  
+  }
+  
+ 
+  @media only screen and (max-width: 1060px) {
+    .aboutustext{
+        line-height: 18px;
+        font-size: 0.8rem;
+        
+      }
+  
+  }
+  @media only screen and (max-width: 950px) {
+    .aboutustext{
+        line-height: 18px;
+        font-size: 0.7rem;
+        
+      }
+      
+   
+  
+  }
+  @media only screen and (max-width: 873px) {
+    .aboutustext{
+        line-height: 14px;
+        font-size: 0.55rem;
+        
+      }
+      
+   
+  
+  }
+  @media only screen and (max-width: 750px) {
+    .aboutustext{
+        line-height: 16px;
+        font-size: 0.7rem;
+        
+      }
+   
+  }
+  @media only screen and (max-width: 576px) {
+    .aboutustext{
+        line-height: 18px;
+        font-size: 1rem;
+        
+      }
+      .videosmar{
+          margin:0 !important;
+          margin-top: 20px !important;
+         
+          
+      }
+  }

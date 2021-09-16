@@ -1,0 +1,173 @@
+h1.bests{
+    
+    text-align: center;
+    font-size: 3rem;
+     font-weight: 400;
+    color:#5a5a5a;
+    text-shadow: 2px 2px 2px #fbb808;
+   
+  } 
+.animate__animated.animate__swing{
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+.animate__animated.animate__backOutRight{
+     animation-delay: 1.5s;
+     
+}
+i.fas{
+ 
+  font-size: 50px; color:#fbb808;
+}
+.card-body>h5{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-align: center;
+   color:wheat
+}
+.card-body>p{
+  text-align:center; 
+  color:white
+}
+.wp-float {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #fbb808;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 40px;
+  box-shadow: 2px 2px 5px gray;
+  z-index: 100;
+  
+}
+
+.my-wp-float {
+    margin-top: 15px;
+}
+
+.wp-float:hover {
+  font-size: 40px;
+  color: #d6a51f;
+  background-color: white;
+}
+.list {
+    overflow: auto !important;
+    height: 250px;
+}
+.page-link {
+    background-color: #fbb808;
+    color:white;
+    
+}
+    .page-link:hover {
+        background-color: white;
+        color: #fbb808;
+    }
+
+.product-img {
+    
+    transition: 0.6s
+}
+    .product-img:hover  {
+        opacity: 0.7;
+    }
+
+
+
+.title {
+    text-decoration: none;
+    transition: 0.7s;
+}
+    .title:hover {
+        color: #fbb808;
+        text-shadow: 2px 2px 2px #5A5A5A;
+    }
+
+@media only screen and (max-width: 900px) {
+    h1 .bests{
+      font-size: 2rem;
+      
+    }
+    i{
+      font-size: 2rem;
+    }
+    .wp-float {
+       
+        font-size: 40px;
+        
+       
+    }
+  }
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+    .searchTerm:focus {
+        color: #00B4CC;
+    }
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  @media only screen and (max-width: 650px) {
+    h1.bests{
+      font-size: 1.5rem;
+    }
+    i.fas{
+      font-size: 1.5rem;
+    }
+    .wp-float {
+        width: 3.5rem;
+        font-size: 2.5rem;
+        height: 3.5rem;
+        bottom: 20px;
+        left: 20px;
+    }
+    .my-wp-float {
+        margin-top: 5px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    h1.bests{
+      font-size: 1rem;
+     
+    }
+    i.fas{
+      font-size: 1rem;
+      
+    }
+  }

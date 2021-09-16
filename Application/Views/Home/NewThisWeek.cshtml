@@ -1,0 +1,41 @@
+﻿@using Entities.Concrete
+@model IEnumerable<Bag>
+@{
+    ViewBag.Title = "NewThisWeek";
+    Layout = "~/Views/Shared/PageLayout.cshtml";
+}
+
+<head>
+    <title>BangThisBag  | New This Week</title>
+</head>
+
+<!-- Product Catagories Area Start -->
+<div class="products-catagories-area clearfix">
+    <div class="row m-2" style="justify-content: center;">
+        <div class="col-10">
+            <a href="/Home/NewThisWeek"> <h1 class="p-4 animate__animated animate__backInRight bests animate__slower title" style="text-align: center !important;">New This Week</h1></a>
+        </div>
+    </div>
+    <div class="amado-pro-catagory clearfix">
+
+        @foreach (var item in Model)
+        {
+            <!-- Single Catagory -->
+            <div class="single-products-catagory clearfix">
+                <a id="itemsearch" href="/Home/BagDetail/@item.Id">
+                    <img src="@item.ImageUrl" alt="@item.Keywords">
+                    <!-- Hover Content -->
+                    <div class="hover-content">
+                        <div class="line"></div>
+                        <p>From $@item.Price</p>
+                        <h4 id="baslik">@item.Title</h4>
+                    </div>
+                </a>
+            </div>
+        }
+
+
+
+    </div>
+</div>
+<!-- Product Catagories Area End -->

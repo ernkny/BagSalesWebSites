@@ -1,0 +1,106 @@
+﻿@using Entities.Dto_s
+@model List<BagDto>
+@{
+    ViewBag.Title = "BagDetail";
+    Layout = "~/Views/Shared/PageLayout.cshtml";
+}
+
+
+<div class="single-product-area section-padding-100 clearfix">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-50">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Product</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="single_product_thumb">
+                    <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(@Model[0].ImageUrl);">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(@Model[1].ImageUrl);">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(@Model[2].ImageUrl);">
+                            </li>
+                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(@Model[3].ImageUrl);">
+                            </li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a class="gallery_img" href="@Model[0].ImageUrl">
+                                    <img class="d-block w-100" src="@Model[0].ImageUrl" alt="First slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="@Model[1].ImageUrl">
+                                    <img class="d-block w-100" src="@Model[1].ImageUrl" alt="Second slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="@Model[2].ImageUrl">
+                                    <img class="d-block w-100" src="@Model[2].ImageUrl" alt="Third slide">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a class="gallery_img" href="@Model[3].ImageUrl">
+                                    <img class="d-block w-100" src="@Model[3].ImageUrl" alt="Fourth slide">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="single_product_desc">
+                    <!-- Product Meta Data -->
+                    <div class="product-meta-data">
+                        <div class="line"></div>
+                        <p class="product-price">$@Model[0].Price</p>
+                        <a href="#">
+                            <h6>@Model[0].Model</h6>
+                        </a>
+                        <!-- Ratings & Review -->
+                        <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <div class="review">
+
+                            </div>
+                        </div>
+                        <!-- Avaiable -->@if (Model[0].InStock == true)
+                        {
+                            <p class="avaibility"><i class="fa fa-circle"></i> In Stock</p>
+                        }
+                        else
+                        {
+                            <p class="avaibility"><i style="color:red;" class="fa fa-circle"></i> Not In Stock</p>
+                        }
+                    </div>
+                    <div class="short_overview my-5" style=" width:100%;  word-wrap: break-word;">
+                        <p>@Html.Raw(Model[0].Description)</p>
+                    </div>
+                    
+
+
+                </div>
+
+                    <button type="submit" name="addtocart" value="5" class="btn amado-btn">Contact With Us</button>
+
+                </div>
+            </div>
+        </div>
+    </div>

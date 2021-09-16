@@ -1,0 +1,11 @@
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\Core.dll.config
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\Core.dll
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\Core.pdb
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\EntityFramework.dll
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\EntityFramework.xml
+C:\Users\Monster\source\repos\BangThisBag\Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Monster\source\repos\BangThisBag\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Monster\source\repos\BangThisBag\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Monster\source\repos\BangThisBag\Core\obj\Debug\Core.dll
+C:\Users\Monster\source\repos\BangThisBag\Core\obj\Debug\Core.pdb

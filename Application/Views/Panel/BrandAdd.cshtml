@@ -1,0 +1,36 @@
+﻿@model Entities.Concrete.Brand
+@{
+    ViewBag.Title = "BrandAdd";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/css/panel/stilpanel.css" />
+</head>
+<div class="container">
+    <a href="/Panel/Brand/" style="text-decoration:none"><h1 style="font-family:bold;font-weight:bold; text-align:center">Markalar</h1></a>
+
+
+
+</div>
+<a href="/Pa
+<div style="padding-top:10px;">
+    <div class="container border p-2 shadow p-3 mb-5 bg-white rounded">
+
+        <div>
+            <p class="alert-danger"> @TempData["errorMessages"] </p>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group ">
+                <label>Marka</label>
+                <input type="text" id="BrandName" class="form-control" name="BrandName" required>
+                <hr />
+
+
+                <button class="btn btn-primary">
+                    Marka Ekle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

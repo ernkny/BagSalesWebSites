@@ -1,0 +1,25 @@
+﻿html {
+    font-size:18px;
+}
+label{
+    font-size:1rem;
+    font-weight:bold;
+    float:left;
+    margin-top:10px
+}
+.container.border.p-2{
+    margin-top:20px;
+}
+.imagesoutside {
+    height: 250px;
+    margin-top:70px;
+}
+    .imagesoutside > div {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background-color: #E9ECEF;
+        margin-right: 10px;
+        margin-left: 4px;
+    }
+

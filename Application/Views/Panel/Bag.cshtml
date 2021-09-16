@@ -1,0 +1,84 @@
+﻿@using Entities.Concrete;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Bag>
+@{
+    ViewBag.Title = "Bag";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+
+<div class="container">
+    <a href="/Panel/Bag/" style="text-decoration:none"><h1 style="font-family:bold;font-weight:bold; text-align:center">Çantalar</h1></a>
+
+
+
+</div>
+<a href="/Panel/BagAdd" class="btn btn-light btn-md active mb-3" style="float:left">Ürün Ekle</a>
+<a href="/Panel/Bag/1" class="btn btn-dark btn-md active mb-3" style="float:right">Vitrin</a>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Model</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Kelimeler</th>
+            <th scope="col">Kapak</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Vitrin</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 1; }
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@i</td>
+                <td>@item.Model</td>
+                <td>@item.Title</td>
+                <td>@item.Keywords</td>
+                <td style="width:15%"><img style="height:100px;width:70px;" src="@item.ImageUrl" alt="Alternate Text" height="25px" /></td>
+                <td>@item.Price&#36;</td>
+                <td>@item.Date</td>
+                @if (item.InStock == true)
+                {
+                    <td style="color:green;">Var</td>
+                }
+                else
+                {
+                    <td style="color:red;">Yok</td>
+                }
+                @if (item.Showcase == true)
+                {
+                    <td><i style="font-size:25px;color:green;" class="fas fa-check-circle"></i></td>
+                }
+                else
+                {
+                    <td><i style="font-size:25px;color:red;" class="fas fa-check-circle"></i></td>
+                }
+
+                <td><a href="/Panel/BagBring/@item.Id" class="btn btn-primary btn-md active mb-3" style="float:left">Güncelle</a></td>
+                <td>@Html.ActionLink("Sil", "BagDelete", new { id = item.Id }, new { @class = "btn btn-danger btn-md active mb-3", onclick = "return confirm('Silmek İstiyor musunuz?')" })</td>
+
+
+
+            </tr>
+            i++;
+        }
+
+
+    </tbody>
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("Bag", new { page }), new PagedListRenderOptions()
+ {
+     LiElementClasses = new List<string> { "page-link" }
+ })
+
+
+

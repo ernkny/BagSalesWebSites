@@ -1,0 +1,54 @@
+﻿@using Entities.Concrete
+@model List<Contact>
+@{
+    ViewBag.Title = "GetFormInfo";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+
+<div class="container">
+    <a href="#" style="text-decoration:none"><h1 style="font-family:bold;font-weight:bold; text-align:center">Form Bilgileri</h1></a>
+
+
+
+</div>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Soyisim</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ülke</th>
+            <th scope="col">Adres</th>
+            <th scope="col">Mesaj</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 1; }
+        @foreach (var item in Model)
+        {
+        <tr>
+
+            <td>@i</td>
+            <td>@item.FirstName</td>
+            <td>@item.SurName</td>
+            <td>@item.Email</td>
+            <td>@item.Country</td>
+            <td>@item.Address</td>
+            <td>@item.Date</td>
+            <td><a href="/Panel/MessageDetail/@item.Id" class="btn btn-success btn-md active mb-3" style="float:left">Mesajı Gör</a></td>
+            <td>@Html.ActionLink("Sil", "ContactDelete", new { id = item.Id }, new { @class = "btn btn-danger btn-md active mb-3", onclick = "return confirm('Silmek İstiyor musunuz?')" })</td>
+
+        </tr>
+            i++;
+        }
+
+
+    </tbody>
+</table>
+

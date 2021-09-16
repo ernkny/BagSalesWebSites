@@ -1,0 +1,22 @@
+﻿@model Entities.Concrete.Contact
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+
+<div class="container  p-4">
+    
+    <a href="#" style="text-decoration:none;"><h1 style="font-family:bold;font-weight:bold; text-align:center">Mesaj İçeriği</h1></a>
+    <div class="card ">
+        <div class="card-header" style="font-size:20px; font-weight:bold;">
+            @Model.Email
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>@Model.Messages</p>
+
+            </blockquote>
+        </div>
+    </div>
+</div>
+

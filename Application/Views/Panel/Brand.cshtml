@@ -1,0 +1,56 @@
+﻿@using Entities.Concrete;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Brand>
+@{
+    ViewBag.Title = "Brand";
+    Layout = "~/Views/Shared/LayoutPanel.cshtml";
+}
+<div class="container">
+    <a href="/Panel/BrandAdd/" style="text-decoration:none"><h1 style="font-family:bold;font-weight:bold; text-align:center">Markalar</h1></a>
+
+
+
+</div>
+<a href="/Panel/BrandAdd" class="btn btn-light btn-md active mb-3" style="float:left">Marka Ekle</a>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marka</th>
+            <th scope="col">Sil</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @{int i = 1; }
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@i</td>
+                <td>@item.BrandName</td>
+                
+               
+
+                
+                <td>@Html.ActionLink("Sil", "BrandDelete", new { id = item.Id }, new { @class = "btn btn-danger btn-md active mb-3", onclick = "return confirm('Silmek İstiyor musunuz?')" })</td>
+
+
+
+            </tr>
+            i++;
+        }
+
+
+    </tbody>
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("Brand", new { page }), new PagedListRenderOptions()
+ {
+     LiElementClasses = new List<string> { "page-link" }
+ })
+
+

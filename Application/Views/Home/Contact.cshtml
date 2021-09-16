@@ -1,0 +1,70 @@
+﻿@using Entities.Concrete
+@model List<Country>
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/ContactLayout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/mainpage/css/Stil.css" />
+    <title>BangThisBag  | Contact</title>
+</head>
+<div class="cart-table-area section-padding-100">
+    <div class="row m-2" style="justify-content: center;">
+        <div class="col-10">
+            <h1 class="p-4 animate__animated animate__jello bests animate__repeat-2" style="text-align: center !important;">@TempData["messages"]</h1>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                <div class="checkout_details_area mt-50 clearfix">
+
+                    <div class="cart-title">
+                        <h2>Contact Form</h2>
+                    </div>
+
+                    @using (Html.BeginForm("PostContactForm", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" name="FirstName" id="first_name" value="" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" name="SurName" id="last_name" value="" placeholder="Last Name" required>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Email" value="" required>
+                            </div>
+                            <div class="col-12 mb-3">
+
+                                <select class="w-100 " id="Country" name="Country" style=" overflow: auto !important;
+                                        height: 250px;">
+                                    @foreach (var item in Model)
+                                    {
+                                        <option name="Country" id="Country" value="@item.Name">@item.Name</option>
+                                    }
+
+
+                                </select>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" class="form-control mb-3" id="street_address" name="Address" placeholder="Address" value="" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <textarea class="form-control w-100" name="Messages" id="comment" cols="30" rows="10" placeholder="Leave yoru message to contact with us" required></textarea>
+                            </div>
+                            <div style="text-align:right" class="col-12 mb-3">
+                                <button type="submit" name="addtocart" value="5" class="btn amado-btn">Send Message</button>
+                            </div>
+
+
+                        </div>
+                    }
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
